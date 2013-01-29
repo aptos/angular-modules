@@ -1,0 +1,11 @@
+<div id="uploadContainer">
+    <div id="dropArea" class="well well-large"><span class="muted">Drag Files Here...</span>
+	    <div ng-repeat="currFile in uploader.files">{{currFile.name}}</div>
+    </div>
+	<button id="addFile" class="btn btn-info btn-small">
+		<i class="icon-plus-sign icon-white"></i> Add File
+	</button>
+	<button ng-show="action != 'Create'" class="btn btn-success btn-small" ng-click="upload()" ng-disabled="uploader.files.length < 1">
+		<i class="icon-upload icon-white"></i> Save Attachments
+	</button>
+</div>
